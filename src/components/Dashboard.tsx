@@ -100,13 +100,14 @@ const Dashboard = () => {
                 <Settings className="h-[18px] w-[18px]" />
                 Settings
               </NavLink>
-              <Button
-                className="gap-4 rounded-lg p-3 hover:bg-muted transition-all hover:text-primary"
+              <button
+              
+                className="flex items-center gap-4 rounded-lg p-3 hover:bg-muted transition-all hover:text-primary"
                 onClick={handleLogout}
               >
                 <Download className="h-[18px] w-[18px]" />
                 Log out
-              </Button>
+              </button>
             </nav>
           </div>
         </div>
