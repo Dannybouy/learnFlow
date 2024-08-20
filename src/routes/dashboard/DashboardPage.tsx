@@ -26,11 +26,11 @@ const Dashboard = () => {
           experts.
         </p>
         <div className="mt-7">
-        <AllCourses/>
+          <AllCourses />
         </div>
       </section>
       <section className="text-center">
-        <NavLink to="/courses">
+        <NavLink to="/dashboard/courses">
           <Button className="mt-8 bg-yellow-400 rounded-full text-black p-[18px] text-base font-dmsans font-bold hover:opacity-90 hover:bg-yellow-400">
             View all courses
           </Button>

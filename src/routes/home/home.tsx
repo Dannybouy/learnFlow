@@ -1,8 +1,6 @@
+import avatars from "@/assets/landing-page/avatars.png";
 import briefcase from "@/assets/landing-page/briefcase-icon.svg";
 import DashboardImage from "@/assets/landing-page/Dashboard2.png";
-import ellipse1 from "@/assets/landing-page/Ellipse 1.svg";
-import ellipse2 from "@/assets/landing-page/Ellipse 5.svg";
-import ellipse3 from "@/assets/landing-page/Ellipse 6.svg";
 import frame from "@/assets/landing-page/frame-icon.svg";
 import heroCircleRight from "@/assets/landing-page/hero-circle-right.svg";
 import heroCircle from "@/assets/landing-page/hero-circle.svg";
@@ -42,20 +40,9 @@ const Home = () => {
           </NavLink>
 
           {/* Avatar Group */}
-          <div className="flex justify-center items-center mt-4">
-            <div className="h-11 w-11 rounded-full border-[1.9px] border-white">
-              <img src={ellipse1} alt="avatar one" />
-            </div>
-            <div className="h-11 w-11 rounded-full border-[1.9px] border-white">
-              <img
-                src={ellipse2}
-                alt="avatar two"
-                className="w-11 h-11 object-cover"
-              />
-            </div>
-            <div className="h-11 w-11 rounded-full border-[1.9px] border-white">
-              <img src={ellipse3} alt="avatar three" />
-            </div>
+
+          <div>
+            <img src={avatars} alt="avatar one" />
           </div>
 
           <small className="mt-4 text-lg md:text-xl text-zinc-400">
@@ -127,19 +114,19 @@ const Home = () => {
       </section>
 
       <section className="mx-[60px] md:mx-[157px] mt-[60px] mb-[104px]">
-        <div className="flex flex-col md:flex-row justify-center items-center md:items-start mb-[70px]">
-          <div className="md:mr-[70px] mb-6 md:mb-0 border-2">
+        <div className="flex flex-col md:flex-row justify-center items-center md:items-start mb-[70px] h-[427px]">
+          <div className="md:mr-[70px] mb-6 md:mb-0 h-full w-full ">
             <img
               src={womanCalling}
               alt="woman holding phone calling"
-              className="rounded-lg w-full max-w-md"
+              className="rounded-lg w-full h-full max-w-md object-cover"
             />
           </div>
-          <div className="flex flex-col text-center md:text-left">
-            <h2 className="text-3xl md:text-5xl w-3/4 font-dmsans font-bold text-black leading-snug">
+          <div className="flex flex-col text-center py-16 md:text-left">
+            <h2 className="text-3xl md:text-5xl font-dmsans font-bold text-black leading-snug">
               Collaborate & learn with our platform
             </h2>
-            <p className="mt-[20px] md:mt-[30px] text-[#555555] text-lg md:text-[22px] font-dmsans w-1/2">
+            <p className="mt-[20px] md:mt-[30px] text-[#555555] text-lg md:text-[22px] font-dmsans">
               We offer a wide range of language courses taught by experienced
               and qualified instructors, who are passionate about teaching and
               dedicated to helping you achieve your language goals.
@@ -152,26 +139,26 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex flex-col-reverse md:flex-row justify-center items-center md:items-start">
-          <div className="md:mr-[70px] mt-6 md:mt-0 order-2 md:order-1">
-            <h2 className="text-3xl md:text-5xl font-dmsans text-black leading-snug">
+        <div className="flex flex-col-reverse md:flex-row justify-center items-center md:items-start h-[427px]">
+          <div className="md:mr-[70px] mt-6 md:mt-0 order-2 md:order-1 py-16">
+            <h2 className="text-3xl md:text-5xl font-dmsans font-bold text-black leading-snug">
               Propel your career & expand your knowledge at any level
             </h2>
             <p className="mt-[20px] md:mt-[30px] text-[#555555] text-lg md:text-[22px] font-dmsans">
               LearnFlow is an online course that provides various categories of
               programming courses.
             </p>
-            <NavLink to="/register" className="mt-[40px] md:mt-[50px]">
-              <Button className="rounded-full px-6 py-4 bg-[#f7CA4E] text-black hover:bg-[#f7CA4E] hover:opacity-80 transition-all delay-75">
+            <NavLink to="/register">
+              <Button className="rounded-full px-6 py-4 bg-[#f7CA4E] text-black hover:bg-[#f7CA4E] hover:opacity-80 transition-all delay-75 mt-[40px]">
                 Get started
               </Button>
             </NavLink>
           </div>
-          <div className="md:ml-[70px] mb-6 md:mb-0 order-1 md:order-2">
+          <div className="md:ml-[70px]  order-1 md:order-2 h-full w-full">
             <img
               src={womanSmiling}
               alt="woman smiling"
-              className="rounded-lg w-full max-w-md"
+              className="rounded-lg w-full h-full object-cover"
             />
           </div>
         </div>
@@ -224,9 +211,11 @@ const Home = () => {
           <p className="mt-7 mb-10 text-xl text-black text-opacity-70">
             Learn at your own pace with lifetime access on mobile and desktop.
           </p>
-          <Button className="bg-black text-white px-8 font-dmsans py-[18px] rounded-full">
-            Get started
-          </Button>
+          <NavLink to="/register">
+            <Button className="bg-black text-white px-8 font-dmsans py-[18px] rounded-full">
+              Get started
+            </Button>
+          </NavLink>
         </div>
         <div className="relative w-[50%]">
           <img
