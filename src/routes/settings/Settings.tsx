@@ -3,11 +3,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { auth, db } from "@/config/firebase";
 import { doc, getDoc } from "firebase/firestore";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 
 const Settings = () => {
-  const [loading, setLoading] = useState(true);
+  //const [loading, setLoading] = useState(true);
 
   const { register, setValue } = useForm();
   useEffect(() => {
@@ -24,11 +24,12 @@ const Settings = () => {
           setValue("accountEmail", user.email || "");
         }
       }
-      setLoading(false);
+      //setLoading(false);
     };
 
     fetchUserData();
   }, [setValue]);
+
   return (
     <>
       <div className="p-3 border-b-2 border-b-black w-fit mb-9">

@@ -1,5 +1,5 @@
 import LogoBlack from "@/assets/Logo-black.svg";
-import formImage from "@/assets/form-image.png";
+import formImage from "@/assets/form-image2.svg";
 import LoginForm from "@/components/LoginForm";
 
 const Login = () => {

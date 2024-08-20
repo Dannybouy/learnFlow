@@ -6,12 +6,14 @@ import ellipse3 from "@/assets/landing-page/Ellipse 6.svg";
 import frame from "@/assets/landing-page/frame-icon.svg";
 import heroCircleRight from "@/assets/landing-page/hero-circle-right.svg";
 import heroCircle from "@/assets/landing-page/hero-circle.svg";
+import Logo from "@/assets/landing-page/Logo.svg";
 import teacher from "@/assets/landing-page/teacher-icon.svg";
 import womanCalling from "@/assets/landing-page/woman-calling.png";
 import womanSmiling from "@/assets/landing-page/woman-smiling.png";
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { logos } from "@/lib/companies";
+import { SocialIcons } from "@/lib/socialsIcons";
 import { testimonials } from "@/lib/testimonies";
 import { NavLink } from "react-router-dom";
 
@@ -34,7 +36,7 @@ const Home = () => {
             Learn at your own pace with lifetime access on mobile and desktop.
           </small>
           <NavLink to="/register" className="my-8">
-            <Button className="rounded-full px-6 py-4 bg-[#f7CA4E] text-black hover:bg-[#f7CA4E] hover:opacity-80 transition-all delay-75">
+            <Button className="rounded-full px-6 py-4 bg-[#f7CA4E] text-black  hover:opacity-80 transition-all delay-75 hover:bg-[#4E7BF7] hover:text-white">
               Start a new course!
             </Button>
           </NavLink>
@@ -214,20 +216,78 @@ const Home = () => {
         </div>
       </section>
 
-      <section>
-        <div>
-          <div>
-            <h2>Expand your skills & Knowledge at any level.</h2>
-            <p>
-              Learn at your own pace with lifetime access on mobile and desktop.
-            </p>
-            <Button>Get started</Button>
-          </div>
-          <div>
-            <img src={DashboardImage} alt="" />
-          </div>
+      <section className="m-[120px] bg-[#F7CA4E] h-[337px] rounded-[20px] flex justify-between items-center overflow-hidden">
+        <div className="pl-[90px] pt-[52px] font-dmsans w-[45%]">
+          <h2 className="font-bold text-[42px] leading-10 text-black">
+            Expand your skills & knowledge at any level.
+          </h2>
+          <p className="mt-7 mb-10 text-xl text-black text-opacity-70">
+            Learn at your own pace with lifetime access on mobile and desktop.
+          </p>
+          <Button className="bg-black text-white px-8 font-dmsans py-[18px] rounded-full">
+            Get started
+          </Button>
+        </div>
+        <div className="relative w-[50%]">
+          <img
+            src={DashboardImage}
+            alt="Dashboard preview"
+            className="absolute right-[-70px] top-[-60px] max-h-[450px] object-cover -rotate-[20deg]"
+          />
         </div>
       </section>
+      <footer className="bg-[#1E1E1E]">
+        <section className="flex justify-between p-[100px]">
+          <div className="not-prose">
+            <img src={Logo} alt="logo" className="h-8 md:h-10" />
+            <p className="text-[#EAECF0] font-dmsans text-xl mt-5 leading-8 w-[60%]">
+              Top learning experiences that create more talent in the world.
+            </p>
+          </div>
+          <div className="grid grid-cols-3 gap-10 font-dmsans">
+            <div className="flex flex-col gap-4">
+              <h3 className="text-white text-opacity-90 text-3xl font-bold">
+                Links
+              </h3>
+              <div className="flex flex-col gap-4 text-xl text-[#EAECF0] text-opacity-70">
+                <p>About Us</p>
+                <p>Programs</p>
+                <p>COntact</p>
+                <p>FAQs</p>
+              </div>
+            </div>
+            <div className="flex flex-col gap-4">
+              <h3 className="text-white text-opacity-90 text-3xl font-bold">
+                Social
+              </h3>
+              <div className="flex flex-col gap-4 text-xl text-[#EAECF0] text-opacity-70">
+                <p>Twitter</p>
+                <p>LinkedIn</p>
+                <p>Facebook</p>
+              </div>
+            </div>
+            <div className="flex flex-col gap-4">
+              <h3 className="text-white text-opacity-90 text-3xl font-bold">
+                Legal
+              </h3>
+              <div className="flex flex-col gap-4 text-xl text-[#EAECF0] text-opacity-70">
+                <p>Terms</p>
+                <p>Privacy</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="px-[100px] py-12 border-t border-opacity-30 border-white flex flex-1 justify-between">
+          <h2 className="text-lg font-dmsans text-white text-opacity-70">
+            © 2024 The programmers University. All rights reserved.
+          </h2>
+          <div className="flex gap-6">
+            {SocialIcons.map((icon) => (
+              <div key={icon.name}>{icon.svg}</div>
+            ))}
+          </div>
+        </section>
+      </footer>
     </main>
   );
 };

@@ -80,13 +80,13 @@ const RegisterForm = () => {
 
   return (
     <Card className="w-full max-w-lg font-poppins">
-      <CardHeader>
+      <CardHeader className="p-6">
         <CardTitle className="text-2xl font-light">Welcome !</CardTitle>
         <CardTitle className="text-3xl mt-2 font-medium">Sign up to</CardTitle>
         <CardDescription>Lorem Ipsum is simply</CardDescription>
       </CardHeader>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <CardContent className="grid gap-6">
+        <CardContent className="grid gap-2">
           <div className="grid gap-2">
             <Label htmlFor="email" className="text-base font-normal">
               Email
